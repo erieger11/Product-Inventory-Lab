@@ -7,4 +7,11 @@ public class PokemonCard {
     private String series;
     private Double price;
     //hi
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
 }
+
