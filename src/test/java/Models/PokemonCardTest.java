@@ -5,6 +5,14 @@ import org.junit.Test;
 
 public class PokemonCardTest  {
     @Test
+    public void setIdTest() {
+        int expected = 7;
+
+        PokemonCard card = new PokemonCard();        card.setId(expected);
+
+        Assert.assertEquals(expected, card.getId());
+    }
+    @Test
     public void setNameTest() {
         String expected = "PokemonCard";
 
@@ -51,14 +59,14 @@ public class PokemonCardTest  {
     }
     @Test
     public void constructorTest(){
-
+        int id = 1;
         String name = "Charizard";
         String rarity = "Holo Rare";
         String condition = "Near mint";
         String series = "Base set";
         Double price = 100.0;
 
-        PokemonCard card = new PokemonCard(name,rarity,condition,series,price);
+        PokemonCard card = new PokemonCard(id,name,rarity,condition,series,price);
 
         Assert.assertEquals(name, card.getName());
         Assert.assertEquals(rarity, card.getRarity());

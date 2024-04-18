@@ -1,19 +1,28 @@
 package Models;
 
 public class MagicTheGatheringCard {
+    private int id;
     private String name;
     private String rarity;
     private String condition;
     private String series;
     private Double price;
 
+
+
     public MagicTheGatheringCard(){}
-    public MagicTheGatheringCard(String name, String rarity, String condition, String series, Double price) {
+    public MagicTheGatheringCard(int id, String name, String rarity, String condition, String series, Double price) {
         this.name = name;
         this.rarity = rarity;
         this.condition = condition;
         this.series = series;
         this.price = price;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId() {
+        return id;
     }
     public void setName(String name) {
         this.name = name;

@@ -4,6 +4,15 @@ import org.junit.Test;
 
 public class MagicTheGatheringCardTest{
     @Test
+    public void setIdTest() {
+        int expected = 5;
+
+        MagicTheGatheringCard card = new MagicTheGatheringCard();
+        card.setId(expected);
+
+        Assert.assertEquals(expected, card.getId());
+    }
+    @Test
     public void setNameTest() {
         String expected = "Black Lotus";
 
@@ -50,14 +59,14 @@ public class MagicTheGatheringCardTest{
     }
     @Test
     public void constructorTest(){
-
+        int id = 1;
         String name = "Black Lotus";
         String rarity = "Mythic Rare";
         String condition = "Lightly Played";
         String series = "Alpha";
         Double price = 10000.0;
 
-        MagicTheGatheringCard card = new MagicTheGatheringCard(name,rarity,condition,series,price);
+        MagicTheGatheringCard card = new MagicTheGatheringCard(id,name,rarity,condition,series,price);
 
         Assert.assertEquals(name, card.getName());
         Assert.assertEquals(rarity, card.getRarity());
